@@ -4,6 +4,23 @@ import Home from "./Home";
 import Results from "./Results";
 
 class App extends Component {
+  state = {
+    location: "home"
+  };
+
+  routingSystem = () => {
+    switch (this.state.location) {
+      case "home":
+        return <Home />;
+        break;
+      case "results":
+        return <Results />;
+        break;
+      default:
+        return <Home />;
+    }
+  };
+
   render() {
     return (
       <div className="container">
@@ -15,7 +32,7 @@ class App extends Component {
             </a>
           </nav>
         </header>
-        <Results />
+        {this.routingSystem()}
       </div>
     );
   }
