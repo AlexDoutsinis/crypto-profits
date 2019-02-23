@@ -2,6 +2,8 @@
 @import url("https://use.fontawesome.com/releases/v5.7.1/css/all.css");
 @import "reset";
 @import "variables";
+@import "home";
+@import "results";
 
 * {
   box-sizing: border-box;
@@ -10,4 +12,41 @@
 body {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
+  background-color: $bgColor;
+}
+
+.container {
+  max-width: 80%;
+  margin: auto;
+}
+
+header {
+  display: grid;
+  grid-template-columns: 11fr 1fr;
+  padding: 15px 0;
+
+  .logo {
+    color: #fff;
+  }
+
+  .menu {
+  }
+}
+
+.main-btn {
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border: solid 1px $link;
+  border-radius: 3px;
+  transition: all 0.3, ease-in-out;
+
+  &:hover {
+    background-color: $link;
+  }
+
+  &.active {
+    background-color: $link;
+  }
 }
