@@ -1,7 +1,13 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700");
 @import url("https://use.fontawesome.com/releases/v5.7.1/css/all.css");
 @import "reset";
+@import "variables";
 
 * {
   box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
 }
