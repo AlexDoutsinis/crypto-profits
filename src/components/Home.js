@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import DatePicker from "react-datepicker";
 
 class Home extends Component {
   render() {
@@ -14,8 +15,10 @@ class Home extends Component {
           <input type="text" name="amount" />
 
           <label>Date</label>
-          <input type="text" name="date" />
-
+          <DatePicker
+            selected={this.props.globalState.date}
+            onChange={this.props.handleDateChange}
+          />
           <button type="submit">Check Profits</button>
         </div>
       </section>
