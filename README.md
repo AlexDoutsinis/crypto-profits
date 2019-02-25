@@ -1,3 +1,3 @@
-## Crypto Profits
+# Crypto Profits
 
-# Calculate your crypto profits
+## Calculate your crypto profits
