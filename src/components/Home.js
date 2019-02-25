@@ -12,14 +12,21 @@ class Home extends Component {
         <div className="right-box">
           <h2>Enter Transaction</h2>
           <label>Crypto Amount</label>
-          <input type="text" name="amount" />
+          <input
+            type="text"
+            name="amount"
+            onChange={this.props.onInputChange}
+            value={this.props.globalState.cryptoAmount}
+          />
 
           <label>Date</label>
           <DatePicker
             selected={this.props.globalState.date}
             onChange={this.props.handleDateChange}
           />
-          <button type="submit">Check Profits</button>
+          <button type="submit" onClick={this.props.checkProfit}>
+            Check Profits
+          </button>
         </div>
       </section>
     );
